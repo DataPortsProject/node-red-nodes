@@ -1,0 +1,18 @@
+DataPorts - A Data Platform for the Connection of Cognitive DataPorts
+AMTE-NODE-RED
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 871493
+
+Copyright 2020-2023 ITI – Instituto Tecnológico de Informática - Project Coordinator
+Copyright 2020-2023 Universitat Politècnica de València
+
+
+
+I. Used Software
+
+This product uses the following software with corresponding licenses:
+
+eslint:3.19.0 (https://www.npmjs.com/package/eslint) distributed under MIT
+eslint-config-airbnb-base:11.3.2 (https://www.npmjs.com/package/eslint-config-airbnb-base) distributed under MIT
+eslint-plugin-html:2.0.3 (https://www.npmjs.com/package/eslint-plugin-html) distributed under ISC
+eslint-plugin-import:2.14.0 (https://www.npmjs.com/package/eslint-plugin-import) distributed under MIT

@@ -1,0 +1,59 @@
+<!-- DataPorts - A Data Platform for the Connection of Cognitive Ports
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 871493
+Copyright (C) 2020-2023, by (Author's company of this file):
+  - ITI – Instituto Tecnológico de Informática - Project Coordinator
+  - UNIVERSITAT POLITÈCNICA DE VALÈNCIA (UPV)
+For more information, contact:
+  - Project coordinator:  <a href="mailto:info@dataports-project.eu"></a>
+This code is licensed under the ASL 2.0 license, available at the root
+application directory. -->
+
+
+<script type="text/javascript">
+  RED.nodes.registerType("retrieve-data", {
+    category: "DATAPORTS - AMTE",
+    color: "#7EB89C",
+    defaults: {
+      username: {value: ""},
+      password: {value: ""},
+      servicename: {value: ""}
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "dataports-logo.png",
+    label: function () {
+      return this.username || "retrieve-data";
+    },
+    oneditprepare: function () {
+      $("#node-input-translation").typedInput({
+        type: "json",
+        types: ["json"],
+      });
+      $("#node-input-requestBody").typedInput({
+        type: "json",
+        types: ["json"],
+      });
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="retrieve-data">
+  <div class="form-row node-input-basic-row">
+    <label for="node-input-username"><i class="fa fa-user"></i> <span data-i18n="common.label.username"></span>Username</label>
+    <input type="text" id="node-input-username" placeholder="Username">
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-password"> <i class="fa fa-lock"></i> <span data-i18n="common.label.password" id="node-span-password"></span><span data-i18n="httpin.label.bearerToken" id="node-span-token" style="display:none"></span>Password</label>
+    <input type="password" id="node-input-password" placeholder="Password">
+  </div>
+
+  <div class="form-row node-input-basic-row">
+    <label for="node-input-servicename"><i class="fa fa-tag"></i> <span data-i18n="common.label.servicename"></span>Service Name</label>
+    <input type="text" id="node-input-servicename" placeholder="Service Name">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="retrieve-data">
+  <p>Retrieve the historic and predicted data from a specific service available in the Automatic Models Training Engine</p>
+</script>
